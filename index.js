@@ -20,7 +20,7 @@ function saleStatus(status, total ) {
     console.log("Transaction " + status + "! Total amount: $"+total);
 };
 
-saleStatus("approved", 30);
+//saleStatus("approved", 30);
 
 function percentage10(price){
     return price - price * 10 /100;
@@ -32,6 +32,23 @@ let num1 = 3;
 
 num1+=21;
 
-console.log(num1);
-//++
-//--
+//console.log(num1);
+
+//console.log(num1 >= 0);
+
+//console.log(num1 ===  3);
+// === compara tipo e valor, == não compara valor
+
+let driver = 900;
+let speed = driver >110? 'Acima da velocidade' : "Abaixo da velocidade";
+//console.log(speed);
+
+let temIdadeMinima = true;
+let temTituloEleitor = false;
+
+let podevotar = temIdadeMinima && temTituloEleitor;
+console.log("pode votar? " + (podevotar? "phoode" :"não pode"));
+
+
+let podeViajar = !podevotar? "pode":"não pode";
+console.log("POde viajar? " +podeViajar )
