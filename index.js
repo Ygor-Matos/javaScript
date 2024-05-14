@@ -94,7 +94,7 @@ for(i=10;i<=20;i++){
     if(i === 15){
         break;
     }
-    console.log("Número: "+i);
+   // console.log("Número: "+i);
 }
 
 let j = 1;
@@ -127,3 +127,52 @@ const amigos = ["Marcos", "ana", "Jose"];
 for (let i of amigos){
  //   console.log( i );
 }
+
+//esse padrão é o factory
+function createBook(title, autor, pages, chapters){
+    let book = {
+        bookTitle: title,
+        bookAuthor: autor,
+        bookPages: pages,
+        printBook:function() {
+            console.log("Printing...")
+        },
+        play:function(){
+            console.log(this.name+" está tocando");
+        }
+    }
+    return book;
+}
+
+let book1= createBook("principe da persia","Ubisoft", 500);
+let book2= createBook("Harry Potter","J.K Rowling", 200);
+book1.color="Red";
+console.log(book1);
+
+
+//fazendo um constructor
+
+function MusicFile(musica, cantor, disco, duracao){
+    this.name=musica;
+    this.author=cantor;
+    this.album=disco;
+    this.duration=duracao;
+
+    // play:function(){
+    //     console.log(this.name+" está tocando");
+    // }
+}
+
+let musicaTeste= new MusicFile('fogueira',"Felipe Amorim", "Ao After e Além", 2.12);
+console.log(musicaTeste);
+// musicaTeste.play();
+
+
+//template literals
+let nome = "thiago"
+const email = 'Hi '+nome+'\nThe meeting is confirmerd! \nAndre';
+console.log(email);
+const email2 =`Hi ${nome},
+The meeting is confirmed!
+Ygor`
+console.log(email2);
