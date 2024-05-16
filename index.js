@@ -241,3 +241,51 @@ const tempLondon = [18,-13,8,-2,-9];
 const tempPositive = tempLondon.filter(negative => negative>=0);
 
 console.log(tempPositive);
+
+
+// seção 6================================================================================================
+
+
+//function declaration
+
+//hoisting, o javaScript AUTOMATICAMENTE pega todas as funções e as move pra cima quando o código é executado
+
+movie();
+
+function movie(){
+    console.log('THe Matrix');
+}
+
+
+// aqui a function pode ser chamada antes de ser declarada
+
+
+//Function Expression
+
+
+const car = function(){
+    console.log('Tesla');
+}
+
+car();
+
+const truck = car;
+
+truck();
+
+function price (){
+    let total = 0 ;
+    for ( let value of arguments){
+        total=total+value;
+    }
+    return total;
+}
+
+console.log(price(10,20,30,40));
+
+
+function carLoan(loan, rate = 2.9, years = 5){
+    return (loan * rate /100 * years) + loan;
+}
+
+console.log(carLoan(20000));
